@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citologia e Organelas Celulares</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f2f2f2; color: #333; }
+    header { background-color: #4CAF50; padding: 20px; color: white; text-align: center; }
+    nav { background: #333; display: flex; justify-content: center; }
+    nav a { color: white; padding: 14px 20px; text-decoration: none; display: block; }
+    nav a:hover { background: #575757; }
+    section { padding: 20px; max-width: 1000px; margin: auto; background: white; margin-bottom: 20px; }
+    .organelas { display: flex; flex-wrap: wrap; gap: 20px; }
+    .organelas div { flex: 1 1 200px; border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fafafa; position: relative; }
+    button { margin-top: 10px; padding: 5px 10px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .resposta { margin-top: 10px; color: #333; display: none; }
+    .quiz-pergunta { margin-bottom: 20px; }
+    .quiz-pergunta h4 { margin-bottom: 5px; }
+    .opcao-label { display: block; margin: 5px 0; cursor: pointer; }
+    .resultado-final { font-weight: bold; margin-top: 20px; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Citologia e Organelas Celulares</h1>
+  </header>
+  <nav>
+    <a href="#intro">Introdução</a>
+    <a href="#tipos">Tipos Celulares</a>
+    <a href="#organelas">Organelas</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <section id="intro">
+    <h2>O que é Citologia?</h2>
+    <p>A citologia é o ramo da biologia que estuda as células, suas estruturas, funções e processos. Toda a vida é composta por células, que são as unidades fundamentais dos seres vivos.</p>
+  </section>
+
+  <section id="tipos">
+    <h2>Tipos Celulares</h2>
+    <ul>
+      <li><strong>Procarionte:</strong> Células simples, como as bactérias, que não possuem núcleo definido nem organelas membranosas.</li>
+      <li><strong>Eucarionte Animal:</strong> Células com núcleo definido e diversas organelas. Não possuem parede celular nem cloroplastos.</li>
+      <li><strong>Eucarionte Vegetal:</strong> Células com núcleo definido, parede celular, cloroplastos e vacúolos grandes.</li>
+    </ul>
+  </section>
+
+  <section id="organelas">
+    <h2>Organelas Celulares</h2>
+    <div class="organelas">
+      <div>
+        <h3>Mitocôndria</h3>
+        <button onclick="mostrar(this)">Ver função</button>
+        <p class="resposta">Responsável pela produção de energia (ATP) na célula.</p>
+      </div>
+      <div>
+        <h3>Ribossomo</h3>
+        <button onclick="mostrar(this)">Ver função</button>
+        <p class="resposta">Faz a síntese de proteínas.</p>
+      </div>
+      <div>
+        <h3>Retículo Endoplasmático</h3>
+        <button onclick="mostrar(this)">Ver função</button>
+        <p class="resposta">Transporte e produção de substâncias (liso e rugoso).</p>
+      </div>
+      <div>
+        <h3>Complexo Golgiense</h3>
+        <button onclick="mostrar(this)">Ver função</button>
+        <p class="resposta">Armazena, modifica e exporta proteínas.</p>
+      </div>
+      <div>
+        <h3>Lisossomo</h3>
+        <button onclick="mostrar(this)">Ver função</button>
+        <p class="resposta">Responsável pela digestão intracelular.</p>
+      </div>
+      <div>
+        <h3>Cloroplasto</h3>
+        <button onclick="mostrar(this)">Ver função</button>
+        <p class="resposta">Realiza a fotossíntese. Presente apenas em células vegetais.</p>
+      </div>
+      <div>
+        <h3>Vacúolo</h3>
+        <button onclick="mostrar(this)">Ver função</button>
+        <p class="resposta">Armazena substâncias. Grande nas células vegetais.</p>
+      </div>
+      <div>
+        <h3>Membrana Plasmática</h3>
+        <button onclick="mostrar(this)">Ver função</button>
+        <p class="resposta">Controla o que entra e sai da célula.</p>
+      </div>
+      <div>
+        <h3>Núcleo</h3>
+        <button onclick="mostrar(this)">Ver função</button>
+        <p class="resposta">Contém o material genético e comanda as atividades celulares.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <h2>Quiz Interativo</h2>
+    <form id="form-quiz">
+      <div class="quiz-pergunta">
+        <h4>1. Qual organela é responsável pela produção de energia na célula?</h4>
+        <label class="opcao-label"><input type="radio" name="q1" value="0"> Ribossomo</label>
+        <label class="opcao-label"><input type="radio" name="q1" value="1"> Mitocôndria</label>
+        <label class="opcao-label"><input type="radio" name="q1" value="2"> Lisossomo</label>
+      </div>
+      <div class="quiz-pergunta">
+        <h4>2. Qual organela realiza a fotossíntese?</h4>
+        <label class="opcao-label"><input type="radio" name="q2" value="0"> Cloroplasto</label>
+        <label class="opcao-label"><input type="radio" name="q2" value="1"> Complexo Golgiense</label>
+        <label class="opcao-label"><input type="radio" name="q2" value="2"> Retículo Endoplasmático</label>
+      </div>
+      <div class="quiz-pergunta">
+        <h4>3. Onde ocorre a síntese de proteínas?</h4>
+        <label class="opcao-label"><input type="radio" name="q3" value="0"> Ribossomos</label>
+        <label class="opcao-label"><input type="radio" name="q3" value="1"> Vacúolo</label>
+        <label class="opcao-label"><input type="radio" name="q3" value="2"> Núcleo</label>
+      </div>
+      <div class="quiz-pergunta">
+        <h4>4. Qual estrutura controla o que entra e sai da célula?</h4>
+        <label class="opcao-label"><input type="radio" name="q4" value="0"> Mitocôndria</label>
+        <label class="opcao-label"><input type="radio" name="q4" value="1"> Membrana Plasmática</label>
+        <label class="opcao-label"><input type="radio" name="q4" value="2"> Lisossomo</label>
+      </div>
+      <div class="quiz-pergunta">
+        <h4>5. Qual organela armazena e exporta proteínas?</h4>
+        <label class="opcao-label"><input type="radio" name="q5" value="0"> Cloroplasto</label>
+        <label class="opcao-label"><input type="radio" name="q5" value="1"> Complexo Golgiense</label>
+        <label class="opcao-label"><input type="radio" name="q5" value="2"> Núcleo</label>
+      </div>
+      <button type="button" onclick="verificarRespostas()">Enviar Respostas</button>
+    </form>
+    <div class="resultado-final" id="resultado-final"></div>
+  </section>
+
+  <script>
+    function mostrar(botao) {
+      const resposta = botao.nextElementSibling;
+      resposta.style.display = resposta.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function verificarRespostas() {
+      const respostasCorretas = [1, 0, 0, 1, 1];
+      let acertos = 0;
+      for (let i = 1; i <= 5; i++) {
+        const opcoes = document.getElementsByName(`q${i}`);
+        for (let j = 0; j < opcoes.length; j++) {
+          if (opcoes[j].checked && parseInt(opcoes[j].value) === respostasCorretas[i - 1]) {
+            acertos++;
+          }
+        }
+      }
+      document.getElementById("resultado-final").textContent = `Você acertou ${acertos} de 5 perguntas.`;
+    }
+  </script>
+</body>
+</html>
